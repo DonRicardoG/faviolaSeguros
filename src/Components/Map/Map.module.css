@@ -1,0 +1,15 @@
+.map {
+  width: 950px;
+  height: 400px;
+  position: relative;
+  bottom: -140px;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+}
+
+.mapContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}

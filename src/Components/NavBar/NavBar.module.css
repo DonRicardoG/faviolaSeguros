@@ -1,0 +1,41 @@
+.navBar img {
+  width: 190px;
+  height: 80px;
+  transition: 0.4s ease;
+  position: relative;
+  animation-name: animacionImg;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
+.navBar {
+  background-color: transparent;
+  position: fixed;
+  padding: 1rem;
+}
+
+.stickyNavBar {
+  position: fixed;
+  background-color: #2c2a50;
+  width: 100%;
+  transition: 0.4s background-color ease-in-out;
+  z-index: 11111;
+  padding: 1rem;
+}
+
+.stickyNavBar img {
+  width: 95px;
+  height: 40px;
+  transition: 0.4s ease;
+}
+
+@keyframes animacionImg {
+  0% {
+    top: -190px;
+  }
+  100% {
+    top: 0px;
+  }
+}
