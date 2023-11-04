@@ -10,6 +10,8 @@ import Footer from "./Components/Footer/Footer";
 import Map from "./Components/Map/Map";
 import logoImg from "./assets/logoImg.png";
 import logoTxt from "./assets/logoTxt.png";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [loader, setLoader] = useState(false);
@@ -21,6 +23,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer />
       <div
         className={loader === false ? "loaderContainer" : "loaderContainerOff"}
       >

@@ -1,12 +1,12 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import style from "./Form.module.css";
-// import Error from "../Error/Error";
+import Error from "../Error/Error";
 import { toast } from "react-toastify";
 
-const serviceId = "service_pso836e";
+const serviceId = "service_0a2rb9j";
 const templateId = "template_ro0yexm";
-const publicId = "vnY-Rz1FRwjHQ8Rek";
+const publicId = "xOMplY3fFsgfnpCa5";
 
 const Form = () => {
   const form = useRef();
@@ -14,7 +14,7 @@ const Form = () => {
     name: "",
     email: "",
     phone: "",
-    mensaje: "",
+    product: "",
   });
 
   const [error, setError] = useState(false);
@@ -25,24 +25,29 @@ const Form = () => {
       inputs.name === "" ||
       inputs.email === "" ||
       inputs.phone === "" ||
-      inputs.producto === ""
+      inputs.product === ""
     ) {
       setError(true);
 
       setTimeout(() => {
         setError(false);
       }, 2000);
-
+      console.log(inputs);
       return;
     }
 
     emailjs.sendForm(serviceId, templateId, form.current, publicId).then(
       (result) => {
-        toast.success("Message sent");
+        toast.success("Message sent", {
+          position: "bottom-right",
+          autoClose: 2000,
+          hideProgressBar: true,
+        });
         setInputs({
-          user_name: "",
-          user_email: "",
-          message: "",
+          name: "",
+          email: "",
+          phone: "",
+          product: "",
         });
         console.log(result.text);
       },
@@ -56,7 +61,7 @@ const Form = () => {
       name: "",
       email: "",
       phone: "",
-      mensaje: "",
+      product: "",
     });
   };
 
@@ -69,7 +74,7 @@ const Form = () => {
 
   return (
     <form ref={form} className={style.formContainer} onSubmit={handleSubmit}>
-      {error && <Error children={"Hay almenos un campo vacio"} />}
+      {error && <Error children={"Hay al menos un campo vacio"} />}
       <input
         placeholder="Juan Perez"
         type="text"
@@ -91,11 +96,11 @@ const Form = () => {
         onChange={handleOnChange}
         name="phone"
       />
-      <select name="producto">
+      <select name="product" value={inputs.product} onChange={handleOnChange}>
         <option>-Selecciona un producto-</option>
-        <option value={inputs.product}>Seguro de vida</option>
-        <option value={inputs.product}>Gastos medicos</option>
-        <option value={inputs.product}>Seguro de Ahorro</option>
+        <option>Seguro de vida</option>
+        <option>Gastos medicos</option>
+        <option>Seguro de Ahorro</option>
       </select>
 
       <button className={style.formBtn} action="submit">
