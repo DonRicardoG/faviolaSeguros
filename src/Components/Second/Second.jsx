@@ -60,7 +60,7 @@ const Second = () => {
           <Link
             smooth={true}
             to="contact"
-            offset={-90}
+            offset={-70}
             duration={1500}
             className={style.elipseBanner1}
           >
