@@ -1,14 +1,14 @@
 .fifthContainer {
   display: flex;
   background-image: url("../../assets/desktop2.png");
-  height: 250px;
+  height: 70vh;
   width: 100%;
   background-size: cover;
   background-position: center center;
-  padding: 10rem;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  flex-direction: column;
 }
 
 .fifthContainer img {
@@ -17,7 +17,35 @@
 }
 
 .fifthContainer h1 {
-  font-size: 40px;
+  font-size: 32px;
   color: #2c2a50;
-  width: 60%;
+  width: 80%;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .fifthContainer {
+    display: flex;
+    background-image: url("../../assets/desktop2.png");
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    padding: 10rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: row;
+  }
+
+  .fifthContainer img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .fifthContainer h1 {
+    font-size: 40px;
+    color: #2c2a50;
+    width: 60%;
+  }
 }

@@ -1,8 +1,8 @@
 .map {
-  width: 950px;
+  width: 90%;
   height: 400px;
   position: relative;
-  bottom: -140px;
+  bottom: -100px;
   border: 1px solid transparent;
   border-radius: 2rem;
 }
@@ -12,4 +12,22 @@
   justify-content: center;
   align-items: center;
   height: 40vh;
+}
+
+@media (min-width: 500px) {
+  .map {
+    width: 950px;
+    height: 400px;
+    position: relative;
+    bottom: -140px;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+  }
+
+  .mapContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+  }
 }

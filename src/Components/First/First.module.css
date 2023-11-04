@@ -1,5 +1,5 @@
 .firstContainer {
-  background-image: url("../../assets/background1.png");
+  background-image: url("../../assets/backgroundMovil.png");
   background-size: cover;
   background-position: center center;
   padding: 2rem;
@@ -10,8 +10,9 @@
 .firstMainContainer {
   display: flex;
   margin: auto;
-  padding: 10rem 15rem 10rem 15rem;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .firstTextContainer {
@@ -21,6 +22,7 @@
   animation: miAnimacion2 1s ease-in 1;
   animation-delay: 1.5s;
   opacity: 0;
+  align-items: center;
 }
 
 .firstTextContainerOn {
@@ -30,34 +32,24 @@
   animation: miAnimacion2 1s ease-in 1;
   animation-delay: 1.5s;
   opacity: 1;
+  align-items: center;
 }
 
 .firstTextContainerOn h1 {
-  width: 100%;
-  height: 184px;
-  font-size: 72px;
+  width: 305px;
+  height: 110px;
+  font-size: 48px;
   color: #2c2a50;
   margin: 0;
+  text-align: center;
 }
-.firstTextContainer h1 {
-  width: 100%;
-  height: 184px;
-  font-size: 72px;
-  color: #2c2a50;
-  margin: 0;
-}
-
-.firstTextContainer button {
+/* .firstTextContainer h1 {
   width: 250px;
-  height: 50px;
-  background-color: #2c2a50;
-  color: white;
-  text-transform: capitalize;
-  font-size: 30px;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  transition: 0.2s background-color ease;
-}
+  height: 160px;
+  font-size: 48px;
+  color: #2c2a50;
+  margin: 0;
+} */
 
 .firstTextContainer button:hover {
   cursor: pointer;
@@ -65,15 +57,17 @@
 }
 
 .firstTextContainerOn button {
-  width: 250px;
-  height: 50px;
+  width: 140px;
+  height: 35px;
   background-color: #2c2a50;
   color: white;
   text-transform: capitalize;
-  font-size: 30px;
+  font-size: 18px;
   border: 1px solid transparent;
   border-radius: 10px;
   transition: 0.2s background-color ease;
+  position: relative;
+  bottom: -300px;
 }
 
 .firstTextContainerOn button:hover {
@@ -82,18 +76,11 @@
 }
 
 .firstContainer p {
-  width: 100%;
-  font-size: 32px;
+  width: 305px;
+  font-size: 18px;
   color: #2c2a50;
-  margin-bottom: 5rem;
-}
-
-.firstImgContainer {
-  display: flex;
-  width: 50%;
-  animation: miAnimacion3 1s ease-in 1;
-  animation-delay: 1.5s;
-  opacity: 0;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .firstImgContainerOn {
@@ -102,11 +89,15 @@
   animation: miAnimacion3 1s ease-in 1;
   animation-delay: 1.5s;
   opacity: 1;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -30px;
 }
 
 .firstMainContainer img {
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   margin: auto;
 }
 
@@ -153,6 +144,161 @@
   border: 1px solid transparent;
   border-radius: 10rem;
   background-color: #6a7da0;
+}
+
+@media (min-width: 500px) {
+  .firstContainer {
+    background-image: url("../../assets/background1.png");
+    background-size: cover;
+    background-position: center center;
+    padding: 2rem;
+    height: 100vh;
+    display: flex;
+  }
+
+  .firstMainContainer {
+    display: flex;
+    margin: auto;
+    padding: 10rem 15rem 10rem 15rem;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .firstTextContainerOn {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    animation: miAnimacion2 1s ease-in 1;
+    animation-delay: 1.5s;
+    opacity: 1;
+    align-items: flex-start;
+  }
+
+  .firstTextContainerOn h1 {
+    width: 100%;
+    height: 184px;
+    font-size: 72px;
+    color: #2c2a50;
+    margin: 0;
+    text-align: start;
+  }
+  .firstTextContainer h1 {
+    width: 100%;
+    height: 184px;
+    font-size: 72px;
+    color: #2c2a50;
+    margin: 0;
+  }
+
+  .firstTextContainer button {
+    width: 250px;
+    height: 50px;
+    background-color: #2c2a50;
+    color: white;
+    text-transform: capitalize;
+    font-size: 30px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.2s background-color ease;
+  }
+
+  .firstTextContainer button:hover {
+    cursor: pointer;
+    background-color: #0009aa;
+  }
+
+  .firstTextContainerOn button {
+    width: 250px;
+    height: 50px;
+    background-color: #2c2a50;
+    color: white;
+    text-transform: capitalize;
+    font-size: 30px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.2s background-color ease;
+    position: inherit;
+  }
+
+  .firstTextContainerOn button:hover {
+    cursor: pointer;
+    background-color: #1a192f;
+  }
+
+  .firstContainer p {
+    width: 100%;
+    font-size: 32px;
+    color: #2c2a50;
+    margin-bottom: 5rem;
+    text-align: start;
+  }
+
+  .firstImgContainer {
+    display: flex;
+    width: 50%;
+    animation: miAnimacion3 1s ease-in 1;
+    animation-delay: 1.5s;
+    opacity: 0;
+  }
+
+  .firstImgContainerOn {
+    display: flex;
+    width: 50%;
+    animation: miAnimacion3 1s ease-in 1;
+    animation-delay: 1.5s;
+    opacity: 1;
+  }
+
+  .firstMainContainer img {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+  }
+
+  .bannerArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #6a7da0;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+  }
+
+  .elipseBanner1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid transparent;
+    border-radius: 10rem;
+    background-color: #2c2a50;
+    bottom: 125px;
+    transition: 0.2s ease-in-out;
+    animation: miAnimacion 0.5s ease-in-out 3;
+    animation-delay: 3s;
+  }
+
+  .elipseBanner1 img {
+    width: 100%;
+  }
+
+  .elipseBanner1:hover {
+    transform: translateY(-15px);
+    cursor: pointer;
+    background-color: #353f50;
+  }
+
+  .elipseBanner2 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid transparent;
+    border-radius: 10rem;
+    background-color: #6a7da0;
+  }
 }
 
 @keyframes miAnimacion {

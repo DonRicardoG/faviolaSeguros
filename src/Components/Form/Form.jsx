@@ -1,12 +1,12 @@
 import React, { useState, useRef } from "react";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import style from "./Form.module.css";
 // import Error from "../Error/Error";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
-// const serviceId = "service_zltoji3";
-// const templateId = "template_rz22o0i";
-// const publicId = "vnY-Rz1FRwjHQ8Rek";
+const serviceId = "service_pso836e";
+const templateId = "template_ro0yexm";
+const publicId = "vnY-Rz1FRwjHQ8Rek";
 
 const Form = () => {
   const form = useRef();
@@ -25,7 +25,7 @@ const Form = () => {
       inputs.name === "" ||
       inputs.email === "" ||
       inputs.phone === "" ||
-      inputs.mensaje === ""
+      inputs.producto === ""
     ) {
       setError(true);
 
@@ -39,7 +39,7 @@ const Form = () => {
     emailjs.sendForm(serviceId, templateId, form.current, publicId).then(
       (result) => {
         toast.success("Message sent");
-        setFormulario({
+        setInputs({
           user_name: "",
           user_email: "",
           message: "",

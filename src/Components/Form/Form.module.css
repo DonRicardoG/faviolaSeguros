@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 400px;
-  width: 75%;
+  width: 100%;
   align-items: center;
   justify-content: space-around;
 }
@@ -13,6 +13,7 @@
   border: 1px solid transparent;
   border-bottom: 3px solid #1c66a6;
   font-size: 18px;
+  border-radius: 5px;
 }
 
 .formContainer select {
@@ -38,4 +39,48 @@
 .formBtn:hover {
   background-color: hsla(215, 19%, 12%);
   cursor: pointer;
+}
+
+@media (min-width: 500px) {
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 75%;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .formContainer input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid transparent;
+    border-bottom: 3px solid #1c66a6;
+    font-size: 18px;
+  }
+
+  .formContainer select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid transparent;
+    border-bottom: 3px solid #1c66a6;
+    font-size: 18px;
+    color: #818181;
+  }
+
+  .formBtn {
+    background-color: hsl(218, 20%, 26%);
+    width: 140px;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.2s background-color ease;
+  }
+
+  .formBtn:hover {
+    background-color: hsla(215, 19%, 12%);
+    cursor: pointer;
+  }
 }
