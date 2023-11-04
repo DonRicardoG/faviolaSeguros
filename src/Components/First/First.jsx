@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./first.module.css";
+import style from "./First.module.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 import profilePicture from "../../assets/mainPicture.png";
 import chevronDown from "../../assets/chevronDown.png";
