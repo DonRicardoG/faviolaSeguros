@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import First from "./Components/First/First";
 import Second from "./Components/Second/Second";
 import Third from "./Components/Third/Third";
@@ -21,6 +21,13 @@ function App() {
     document.querySelector("#body").classList.remove("hiddenOverFlow");
   }, 2000);
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
     <>
       <ToastContainer />

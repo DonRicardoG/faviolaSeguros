@@ -22,7 +22,6 @@ const First = (props) => {
             Tener un seguro es prevenir el futuro economico de la familia y el
             nuestro.
           </p>
-          <button>saber mas</button>
         </div>
         <div
           className={
